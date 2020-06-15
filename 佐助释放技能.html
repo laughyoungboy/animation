@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#d1{
+				width: 900px;
+				height: 190px;
+				background-image: url(img/hq.png);
+				background-size: auto;
+				animation: hq 23s steps(23) infinite;
+			}
+			@keyframes hq{
+				from{
+					background-position: 0 0;
+				}
+				to{
+					background-position:0px -4416px ;
+				}
+			}
+			#zuozhu{
+				width: 30px;
+				height: 30px;
+				background: skyblue;
+				border-radius: 15px;
+			}
+			#zuozhu:checked~#d1{
+				animation: hq 2s steps(23) infinite;
+			}
+			
+			label{
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				font-size: 20px;
+				color: #CCCCCC;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				text-align: center;
+				line-height: 40px;
+			}
+			.choose{
+				width: 900px;
+				height: 300px;
+				text-align: center;
+				margin: 0 auto;
+			}
+			#zuozhu:checked ~.choose [for="zuozhu"]{
+				background: #ccc;
+				color: #fff;
+				box-shadow: 0 0 30 #999999;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" name="" id="zuozhu" value="" hidden="hidden" />
+			<div id="d1">
+				
+			</div>
+			<div class="choose">
+				<label for="zuozhu">火球术</label>
+			</div>
+			
+	</body>
+</html>

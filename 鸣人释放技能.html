@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#d1{
+				width: 900px;
+				height: 200px;
+				/* border: 1px solid #ccc; */
+				/* 背景图片 */
+				background-image: url(img/lxw.png);
+				/* 背景图片大小 */
+				background-size: auto;
+				/* 背景图片的位置
+				  background-position：x y;
+				 */
+				/* background-position: -1px -8px; */
+				/* animation: ydn 5s linear infinite; */
+				/* animation: lxw 2s steps(16) infinite; */
+			}
+			@keyframes lxw{
+				from{
+					background-position: 0 0;
+				}
+				to{
+					background-position:0px -3072px ;
+				}
+			}
+			#mingren{
+				width: 30px;
+				height: 30px;
+				background: skyblue;
+				border-radius: 15px;
+			}
+			#mingren:checked~#d1{
+				animation: lxw 2s steps(16) infinite;
+			}
+			
+			label{
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				font-size: 20px;
+				color: #CCCCCC;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				text-align: center;
+				line-height: 40px;
+			}
+			.choose{
+				width: 900px;
+				height: 300px;
+				text-align: center;
+				margin: 0 auto;
+			}
+			#mingren:checked ~.choose [for="mingren"]{
+				background: #ccc;
+				color: #fff;
+				box-shadow: 0 0 30 #999999;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" name="" id="mingren" value="" hidden="hidden" />
+			<div id="d1">
+				
+			</div>
+			<div class="choose">
+				<label for="mingren">螺旋丸</label>
+			</div>
+			
+	</body>
+</html>
